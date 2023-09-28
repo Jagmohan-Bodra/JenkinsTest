@@ -1,11 +1,7 @@
 pipeline {
 
-	
-    agent any
-    
-    environment{
-	    SECRET_TEST = "Secret"
-    }
+    agent {label "WIN-CICD"}
+
      
     stages {	
 			
