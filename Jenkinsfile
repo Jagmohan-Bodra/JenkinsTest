@@ -1,15 +1,15 @@
 pipeline {
-
-    agent {label "WIN-CICD"}
-
-     
+	
+     agent {label "WIN-CICD"}
+    
+ 
     stages {	
 			
 		stage('Publish') {
 			parallel {
 				stage('Build for TEST') {
 					when {
-						branch 'development'
+						branch 'test'
 					}
 					steps {
 						bat 'echo this is Development Branch'
@@ -25,7 +25,7 @@ pipeline {
 				}
 				stage('Build for PRODUCTION') {
 					when {
-						branch 'main'
+						branch 'master'
 					}
 					steps {
 						bat 'echo this is Production Branch'
