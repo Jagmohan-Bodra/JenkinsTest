@@ -1,6 +1,5 @@
 pipeline {
 
-	
     agent {label "WIN-CICD"}
 
      
