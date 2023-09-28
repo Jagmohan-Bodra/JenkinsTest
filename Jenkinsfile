@@ -1,19 +1,21 @@
+// Publish profiles 
+
+
 pipeline {
 
-
-    agent {label "WIN-CICD"}
-
-     
-    stages {	
-			
+  agent {label "WIN-CICD"}
+  
+  
+	stages {	
+				
 		stage('Publish') {
 			parallel {
 				stage('Build for TEST') {
 					when {
-						branch 'development'
+						branch 'test'
 					}
 					steps {
-						bat 'echo this is Development Branch'
+						bat "Test Branch"
 					}					
 				}
 				stage('Build for STAGE') {
@@ -21,7 +23,7 @@ pipeline {
 						branch 'stage'
 					}
 					steps {
-						bat 'echo this is Staging Branch'
+						bat "Staging Branch"
 					}					
 				}
 				stage('Build for PRODUCTION') {
@@ -29,11 +31,15 @@ pipeline {
 						branch 'master'
 					}
 					steps {
-						bat 'echo this is Production Branch'
+						bat "master branch"
 					}					
 				}
-
 			}
 		}
 	}
+	post { 
+        always { 
+            cleanWs()
+        }
+    }
 }
