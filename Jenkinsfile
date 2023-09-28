@@ -1,12 +1,8 @@
 pipeline {
-
 	
-    agent any
+     agent {label "WIN-CICD"}
     
-    environment{
-	    SECRET_TEST = "Secret"
-    }
-     
+ 
     stages {	
 			
 		stage('Publish') {
