@@ -1,8 +1,6 @@
 pipeline {
-	
      agent {label "WIN-CICD"}
     
- 
     stages {	
 			
 		stage('Publish') {
