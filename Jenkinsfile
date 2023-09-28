@@ -26,7 +26,7 @@ pipeline {
 				}
 				stage('Build for PRODUCTION') {
 					when {
-						branch 'main'
+						branch 'master'
 					}
 					steps {
 						bat 'echo this is Production Branch'
