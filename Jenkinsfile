@@ -2,7 +2,10 @@ pipeline {
 
 	
     agent any
-
+    
+    environment{
+	    SECRET_TEST = "Secret"
+    }
      
     stages {	
 			
