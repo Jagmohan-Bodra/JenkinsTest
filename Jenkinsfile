@@ -1,5 +1,7 @@
 pipeline {
-    agent {label "WIN-CICD"}
+
+	
+    agent any
 
      
     stages {	
