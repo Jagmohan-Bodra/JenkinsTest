@@ -23,7 +23,7 @@ pipeline {
 						branch 'stage'
 					}
 					steps {
-						bat 'echo stage branch'
+						bat 'echo stage branch edit'
 					}					
 				}
 				stage('Build for PRODUCTION') {
