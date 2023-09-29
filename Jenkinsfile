@@ -15,7 +15,7 @@ pipeline {
 						branch 'test'
 					}
 					steps {
-						bat 'echo test branch'
+						bat 'echo test branch edit'
 					}					
 				}
 				stage('Build for STAGE') {
