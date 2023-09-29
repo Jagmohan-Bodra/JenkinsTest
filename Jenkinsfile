@@ -31,7 +31,7 @@ pipeline {
 						branch 'master'
 					}
 					steps {
-						bat 'echo master branch'
+						bat 'echo master branch edit'
 					}					
 				}
 			}
