@@ -15,7 +15,7 @@ pipeline {
 						branch 'test'
 					}
 					steps {
-						bat 'echo test branch edit'
+						bat 'echo test branch'
 					}					
 				}
 				stage('Build for STAGE') {
@@ -23,7 +23,7 @@ pipeline {
 						branch 'stage'
 					}
 					steps {
-						bat 'echo stage branch edit'
+						bat 'echo stage branch'
 					}					
 				}
 				stage('Build for PRODUCTION') {
@@ -31,7 +31,7 @@ pipeline {
 						branch 'master'
 					}
 					steps {
-						bat 'echo master branch'
+						bat 'echo master'
 					}					
 				}
 			}
